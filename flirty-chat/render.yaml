@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: flirty-chat-api
+    env: node
+    plan: free
+    region: singapore
+    buildCommand: npm install
+    startCommand: node server.js
+    repo: https://github.com/YOUR_GITHUB_USER/flirty-chat
+    rootDir: backend
+    envVars:
+      - key: STRIPE_SECRET
+        sync: false
+      - key: WEBHOOK_SECRET
+        sync: false
+      - key: ADMIN_TOKEN
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB
+        value: flirtychat
+      - key: PORT
+        value: "10000"
+
+      # Premium prices
+      - key: PRICE_PREMIUM_M1
+        sync: false
+      - key: PRICE_PREMIUM_M3
+        sync: false
+      - key: PRICE_PREMIUM_M6
+        sync: false
+      - key: PRICE_PREMIUM_M12
+        sync: false
+
+      # Ultra prices
+      - key: PRICE_ULTRA_M1
+        sync: false
+      - key: PRICE_ULTRA_M3
+        sync: false
+      - key: PRICE_ULTRA_M6
+        sync: false
+      - key: PRICE_ULTRA_M12
+        sync: false

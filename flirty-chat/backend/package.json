@@ -1,0 +1,15 @@
+{
+  "name": "flirty-chat-api",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1",
+    "stripe": "^16.0.0"
+  }
+}
